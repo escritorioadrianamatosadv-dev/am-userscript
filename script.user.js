@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Adriana Matos Advocacia — Sub-Inbox Gmail
 // @namespace    https://adrianamatos.adv.br/
-// @version      1.3.2
+// @version      1.3.3
 // @description  Painel de sub-inboxes por município injetado no Gmail — Adriana Matos Advocacia
 // @author       Carlos Daniel
 // @match        https://mail.google.com/*
