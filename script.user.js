@@ -735,9 +735,9 @@ GM_xmlhttpRequest({
       return `<div class="am-loading"><span class="am-loading-dot"></span><span class="am-loading-txt">Adriana Matos Advocacia — sincronizando dados...</span></div>`;
     }
     if (!chaves.length) {
-      return `<div class="am-wrap"><div class="am-brand-row"><span class="am-brand-icon">Lei</span><span class="am-brand-name">Adriana Matos Advocacia — Gerenciador de Email</span><span class="am-brand-sync">${state.lastSync ? 'OK ' + formatHora(state.lastSync) : ''}</span></div><div class="am-empty" style="padding:24px 20px;">Nenhuma sub-inbox cadastrada. <a href="${WEB_APP_URL}" target="_blank" style="color:#4986e7;">Abrir painel</a></div></div>`;
+      return `<div class="am-wrap"><div class="am-brand-row"><span class="am-brand-icon">Lei</span><span class="am-brand-name">Adriana Matos Advocacia — Gerenciador de Emails</span><span class="am-brand-sync">${state.lastSync ? 'OK ' + formatHora(state.lastSync) : ''}</span></div><div class="am-empty" style="padding:24px 20px;">Nenhuma sub-inbox cadastrada. <a href="${WEB_APP_URL}" target="_blank" style="color:#4986e7;">Abrir painel</a></div></div>`;
     }
-    return `<div class="am-wrap"><div class="am-brand-row"><span class="am-brand-icon">Lei</span><span class="am-brand-name">Adriana Matos Advocacia — Gerenciador de Email</span><span class="am-brand-sync">${state.lastSync ? 'OK ' + formatHora(state.lastSync) : ''}</span></div><div class="am-si-list">${chaves.map(buildSubInbox).join('')}</div></div>`;
+    return `<div class="am-wrap"><div class="am-brand-row"><span class="am-brand-icon">Lei</span><span class="am-brand-name">Adriana Matos Advocacia — Gerenciador de Emails</span><span class="am-brand-sync">${state.lastSync ? 'OK ' + formatHora(state.lastSync) : ''}</span></div><div class="am-si-list">${chaves.map(buildSubInbox).join('')}</div></div>`;
   }
 
   function buildSubInbox(chave) {
