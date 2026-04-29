@@ -17,12 +17,12 @@ jobs:
       - name: Bump @version
         run: |
           FILE="script.user.js"
-          OLD=$(grep -oP '(?<=@version\s{1,10})[\d.]+' "$FILE" | head -1)
+          OLD=$(grep -oP '@version\s+\K[\d.]+' "$FILE" | head -1)
           echo "Versão atual: $OLD"
           if [ -z "$OLD" ]; then echo "ERRO: @version não encontrado"; exit 1; fi
           NEW=$(echo $OLD | awk -F. '{$NF=$NF+1; print}' OFS='.')
           echo "Nova versão: $NEW"
-          sed -i "s/@version\s*$OLD/@version $NEW/" "$FILE"
+          sed -i "s/@version $OLD/@version $NEW/" "$FILE"
 
       - name: Commit e push
         run: |
